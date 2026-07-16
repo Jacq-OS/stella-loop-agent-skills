@@ -1,0 +1,8 @@
+{
+  "name": "stella-loop",
+  "description": "Operate Stella Loop: status briefs, disciplined work sessions, and analyzer authoring.",
+  "version": "0.2.1",
+  "author": {
+    "name": "Stella Loop"
+  }
+}

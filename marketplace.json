@@ -1,0 +1,11 @@
+{
+  "name": "stella-loop",
+  "description": "Official Stella Loop agent skills",
+  "plugins": [
+    {
+      "name": "stella-loop",
+      "source": "github:Jacq-OS/stella-loop-agent-skills",
+      "install": "/plugin install stella-loop@stella-loop"
+    }
+  ]
+}
