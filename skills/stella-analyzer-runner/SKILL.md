@@ -1,7 +1,7 @@
 ---
 name: stella-analyzer-runner
 description: Execute one Stella Loop analyzer run honestly from your own session, attended or pulled, and submit its report against the run.
-min_stella_version: "0.2.4"
+min_stella_version: "0.2.5"
 ---
 
 # Stella Analyzer Runner
