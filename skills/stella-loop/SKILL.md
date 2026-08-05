@@ -1,7 +1,7 @@
 ---
 name: stella-loop
 description: Read a Stella Loop situational brief and route the next action through the CLI. Use when deciding what needs attention in a Stella project.
-min_stella_version: "0.2.15"
+min_stella_version: "0.2.16"
 ---
 
 # Stella Loop

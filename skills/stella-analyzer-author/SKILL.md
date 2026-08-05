@@ -1,7 +1,7 @@
 ---
 name: stella-analyzer-author
 description: Author, validate, publish, and install Stella Loop analyzers through repository config, the in-app builder, or the registry.
-min_stella_version: "0.2.15"
+min_stella_version: "0.2.16"
 ---
 
 # Stella Analyzer Author
