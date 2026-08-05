@@ -1,7 +1,7 @@
 ---
 name: stella-worker
 description: Execute Stella Loop work with claims, fenced sessions, heartbeats, truthful events, and honest completion or failure.
-min_stella_version: "0.2.12"
+min_stella_version: "0.2.14"
 ---
 
 # Stella Worker
