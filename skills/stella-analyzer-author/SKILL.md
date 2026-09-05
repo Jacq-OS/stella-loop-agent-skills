@@ -1,7 +1,7 @@
 ---
 name: stella-analyzer-author
 description: Author, validate, publish, and install Stella Loop analyzers through repository config, the in-app builder, or the registry.
-min_stella_version: "0.2.17"
+min_stella_version: "0.2.18"
 ---
 
 # Stella Analyzer Author
@@ -44,7 +44,7 @@ silently dropping a field.
 | ---- | ------------------------------- | --------------------------------------------------------------------------- |
 | 3    | Authentication failed           | Refresh the key or run `stella auth login --with-key`, then validate again. |
 | 6    | Version or publication conflict | Fetch current analyzer state, increment from that version, and revalidate.  |
-| 7    | Rate limited                    | Honor `retryAfterMs`; keep the local manifest unchanged while waiting.      |
+| 7    | Rate limited                    | Honor `retryAfterSeconds`; keep the local manifest unchanged while waiting. |
 
 Use `stella --help` for discovery and `stella api` only as the documented CLI
 escape hatch. Never issue raw HTTP from this skill.

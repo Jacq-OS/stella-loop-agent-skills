@@ -1,7 +1,7 @@
 {
   "name": "stella-loop",
-  "description": "Operate Stella Loop: status briefs, disciplined work sessions, and analyzer authoring.",
-  "version": "0.2.17",
+  "description": "Operate Stella Loop: status briefs, disciplined work sessions, analyzer authoring, and the project-manager loop.",
+  "version": "0.2.18",
   "author": {
     "name": "Stella Loop"
   }

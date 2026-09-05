@@ -1,7 +1,7 @@
 ---
 name: stella-loop
 description: Read a Stella Loop situational brief and route the next action through the CLI. Use when deciding what needs attention in a Stella project.
-min_stella_version: "0.2.17"
+min_stella_version: "0.2.18"
 ---
 
 # Stella Loop
@@ -43,15 +43,17 @@ budget or routing holds. Do not claim work merely to make the brief look busy.
 
 ## Route the next action
 
-| Situation                                 | Route                                                                           |
-| ----------------------------------------- | ------------------------------------------------------------------------------- |
-| Suitable ready work exists                | Use the `stella-worker` skill, or claim with `stella work next --json`.         |
-| A specific ready task is assigned         | `stella task claim <task-id> --json`, then use `stella-worker`.                 |
-| An approval id such as `apr_…` is pending | Inspect it, then `stella approve <approval-id> --json` or reject with a reason. |
-| Analyzer behavior must be authored        | Use `stella-analyzer-author`.                                                   |
-| Nothing is ready but items wait           | Read inbox and routing/approval details; report the named hold.                 |
+| Situation                                                                                | Route                                                                           |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Suitable ready work exists                                                               | Use the `stella-worker` skill, or claim with `stella work next --json`.         |
+| A specific ready task is assigned                                                        | `stella task claim <task-id> --json`, then use `stella-worker`.                 |
+| An approval id such as `apr_…` is pending                                                | Inspect it, then `stella approve <approval-id> --json` or reject with a reason. |
+| Analyzer behavior must be authored                                                       | Use `stella-analyzer-author`.                                                   |
+| This actor is the project's PM, or a binding is pending for it (`stella pm show --json`) | Use `/stella-pm` — the `stella-pm` skill.                                       |
+| Nothing is ready but items wait                                                          | Read inbox and routing/approval details; report the named hold.                 |
 
 ```sh
+stella pm show --json
 stella approvals show <approval-id> --json
 stella approve <approval-id> --json
 stella reject <approval-id> --reason "Why this cannot proceed" --json
@@ -63,7 +65,7 @@ stella reject <approval-id> --reason "Why this cannot proceed" --json
 | ---- | ------------------------------- | ------------------------------------------------------------------------------------ |
 | 3    | Authentication failed           | Refresh `STELLA_API_KEY` or run `stella auth login --with-key`, then rerun the read. |
 | 6    | A claim or decision lost a race | Refresh the brief and move to the next current item.                                 |
-| 7    | Rate limited                    | Honor `retryAfterMs`; do not create a tight retry loop.                              |
+| 7    | Rate limited                    | Honor `retryAfterSeconds`; do not create a tight retry loop.                         |
 
 Use `stella --help` for discovery. Use `stella api` only as the documented CLI
 escape hatch; never teach or issue raw HTTP from this skill.
