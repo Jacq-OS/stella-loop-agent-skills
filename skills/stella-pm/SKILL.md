@@ -1,7 +1,7 @@
 ---
 name: stella-pm
 description: Run a Stella Loop project as its bound project manager — read the factory, triage intake, act only through the ledger, publish a brief every turn, then wait. Use when `stella pm show` names this actor as the project's PM.
-min_stella_version: "0.2.18"
+min_stella_version: "0.2.19"
 ---
 
 # Stella Project Manager

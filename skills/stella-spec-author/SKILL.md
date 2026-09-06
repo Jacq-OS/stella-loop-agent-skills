@@ -1,7 +1,7 @@
 ---
 name: stella-spec-author
 description: Author one Stella Loop spec revision as a bound external executor — read the authoring context, publish to the exact candidate branch, submit the heads, and never approve your own work.
-min_stella_version: "0.2.18"
+min_stella_version: "0.2.19"
 ---
 
 # Stella Spec Author

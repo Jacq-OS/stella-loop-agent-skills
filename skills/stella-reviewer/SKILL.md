@@ -1,7 +1,7 @@
 ---
 name: stella-reviewer
 description: Act as one routed Stella Loop review panel member — read the member context, submit honest evidence-backed findings under the binding, mark the member submitted with a calibrated score, and never decide the outcome.
-min_stella_version: "0.2.18"
+min_stella_version: "0.2.19"
 ---
 
 # Stella Reviewer
